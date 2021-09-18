@@ -6,11 +6,8 @@ from twilio.rest import Client
 # TWILIO_PHONE_NUMBER = "+15126451472"
 
 # account_sid = os.environ['TWILIO_ACCOUNT_SID']
-#account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
-#auth_token = os.environ['TWILIO_AUTH_TOKEN']
-
-account_sid = "ACb56a5f78a63da9e3798a8fb5dfe7ca64"
-auth_token = "21bdfbbddda75d589f46a497db272059"
+account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
 
 # print (account_sid)
 # print (auth_token)
@@ -19,8 +16,8 @@ client = Client(account_sid, auth_token)
 
 call = client.calls.create(
                         twiml='<Response><Say>Ahoy, World!</Say></Response>',
-                        to='+6597354386',
-                        from_='+15126451472'
+                        to='+xxxxxxxxxx',
+                        from_='+1yyyyyyyyyy'
                     )
 
 print(call.sid)
