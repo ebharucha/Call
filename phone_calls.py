@@ -1,10 +1,6 @@
 import os
 from twilio.rest import Client
 
-# Twilio phone number goes here. Grab one at https://twilio.com/try-twilio
-# and use the E.164 format, for example: "+12025551234"
-# TWILIO_PHONE_NUMBER = "+15126451472"
-
 # account_sid = os.environ['TWILIO_ACCOUNT_SID']
 account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -21,4 +17,3 @@ call = client.calls.create(
                     )
 
 print(call.sid)
-#
